@@ -136,8 +136,11 @@ To ensure the testing suite runs correctly without legacy Babel configurations, 
 * **a. Install Jest and SWC Transformer**
     * Command:
     ```bash
-    npm install @swc/jest --save-dev
     npm install --save-dev jest @testing-library/react @testing-library/jest-dom jest-environment-jsdom
+    npm install --save-dev identity-obj-proxy
+    npm install --save-dev @types/jest
+    npm install --save-dev @types/testing-library__jest-dom
+    npm install @swc/jest --save-dev
     ```
     * Description: Installs the Jest integration for the Speedy Web Compiler (SWC).
 
