@@ -90,7 +90,8 @@ The frontend is a Next.js application that consumes the API.
     * Description: Installs React, Next.js, Tailwind CSS, and dev dependencies.
     * Command:
     ```bash
-    npm install
+    npx create-next-app@latest frontend --typescript
+    npm install lucide-react
     ```
 
 * **c. Create .env.local**
