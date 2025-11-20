@@ -9,20 +9,23 @@ Follow these steps precisely to set up and run both the backend API and the fron
 ### Prerequisites
 
 Node.js (LTS version, e.g., 18.x or 20.x)
+
 npm (Node Package Manager)
+
 Python 3.10.10
 
 ### 1. Backend Setup (API)
 
 The backend is built in Python and uses a virtual environment for dependency isolation.
 
-Step,Command,Description
-a. Clone Repository,git clone <YOUR_REPO_URL>,Clones the project files.
-b. Navigate to Backend,cd backend,Enters the backend directory.
-c. Create Virtual Env,python -m venv venv,Creates an isolated virtual environment named venv.
-d. Activate Venv,.\venv\Scripts\activate (Windows)  source venv/bin/activate (macOS/Linux),Activates the virtual environment.
-e. Install Dependencies,pip install -r requirements.txt,"Installs FastAPI, Uvicorn, Faker, and other dependencies."
-f. Run the API,uvicorn main:app --reload,"Starts the FastAPI server, usually on http://127.0.0.1:8000."
+| Step                        | Command                                                                   | Description                                                 |
+| --------------------------- | ------------------------------------------------------------------------- |---------------------------------------------------- |                                            |
+| a. **Clone Repository**     | git clone <YOUR_REPO_URL>                                                 | Clones the project files.                                   |
+| b. **Navigate to Backend**  | cd backend                                                                | Enters the backend directory.                               |
+| c. **Create Virtual Env**   | python -m venv venv                                                       | Creates an isolated virtual environment named venv.         |
+| d. **Activate Venv**        | .\venv\Scripts\activate (Windows)  source venv/bin/activate (macOS/Linux) | Activates the virtual environment.                          |
+| e. **Install Dependencies** | pip install -r requirements.txt                                           | "Installs FastAPI, Uvicorn, Faker, and other dependencies." |
+| f. **Run the API**          | uvicorn main:app --reload                                                 | "Starts the FastAPI server, usually on http://127.0.0.1:8000." |
 
 The API is now running and serving data. Keep this terminal window open.
 
@@ -57,8 +60,6 @@ a. Install SWC Transformer,npm install @swc/jest --save-dev,Installs the Jest in
 b. Run Tests,npm test,Executes the Jest test suite.
 
 ## Project Technology Stack
-This project utilizes a modern stack selected for performance, maintainability, and developer experience.
-
 ### Backend Stack
 
 Technology,Reason for Selection
