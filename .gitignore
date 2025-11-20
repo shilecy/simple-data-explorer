@@ -1,0 +1,59 @@
+# ==================================
+# Build Artifacts & Generated Files (Apply Recursively)
+# ==================================
+
+# Next.js
+
+.next/
+out/
+build/
+dist/
+/coverage
+
+# Node & Dependencies
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.yarn/cache
+.pnp.*
+.eslintcache
+
+
+# Python Artifacts
+
+pycache/
+*.pyc
+venv/
+.venv/
+.pytest_cache/
+
+# Generated Data & Local Files
+
+sql_app.db
+*.sqlite
+*.db
+.DS_Store
+*.swp
+
+# Environment & Configuration
+# Local Environment Variables (Crucial to ignore secrets)
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE/Editor Configuration
+.idea/
+
+# VS Code (Ignore standard cache/user files but keep useful shared config)
+.vscode/*
+
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

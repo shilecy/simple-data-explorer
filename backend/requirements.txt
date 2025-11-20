@@ -1,0 +1,5 @@
+fastapi
+uvicorn[standard]  # ASGI server for running FastAPI
+sqlalchemy         # ORM for database interaction
+pydantic           # Used by FastAPI for data validation
+faker              # To generate realistic fake data for seeding
