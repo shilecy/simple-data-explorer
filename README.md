@@ -87,11 +87,10 @@ The frontend is a Next.js application that consumes the API.
     ```
 
 * **b. Install Dependencies**
-    * Description: Installs React, Next.js, Tailwind CSS, and dev dependencies.
+    * Description: Installs all production and development dependencies (including Next.js, React, Tailwind CSS, Jest, and SWC) listed in the package.json file.
     * Command:
     ```bash
-    npx create-next-app@latest frontend --typescript
-    npm install lucide-react
+    npm install
     ```
 
 * **c. Create .env.local**
@@ -132,20 +131,9 @@ The backend uses pytest for testing endpoints and data logic.
 
 ### Frontend Testing
 
-To ensure the testing suite runs correctly without legacy Babel configurations, we use the modern SWC transformer. Make sure to run in the frontend directory (cd frontend and no venv is required).
+To ensure the testing suite runs correctly without legacy Babel configurations, we rely on the modern SWC transformer and required dependencies installed in step 2b. Make sure to run the tests in the frontend directory.
 
-* **a. Install Jest and SWC Transformer**
-    * Command:
-    ```bash
-    npm install --save-dev jest @testing-library/react @testing-library/jest-dom jest-environment-jsdom
-    npm install --save-dev identity-obj-proxy
-    npm install --save-dev @types/jest
-    npm install --save-dev @types/testing-library__jest-dom
-    npm install @swc/jest --save-dev
-    ```
-    * Description: Installs the Jest integration for the Speedy Web Compiler (SWC).
-
-* **b. Run Tests**
+* **a. Run Tests**
     * Command:
     ```bash
     npm test
@@ -154,11 +142,11 @@ To ensure the testing suite runs correctly without legacy Babel configurations, 
 
 ---
 
-## Project Technology Stack
+## Project Tech Stack
 
 ### Backend Stack
 
-| Technology | Reason for Selection |
+| Tech | Reason for Selection |
 | :--- | :--- |
 | Python | Reliable, highly readable language for server-side logic. |
 | FastAPI | Chosen over Django/Flask due to its superior performance for API endpoints, built on asynchronous programming (async/await). It uses Pydantic for mandatory data validation, resulting in fewer runtime errors and automatic API documentation. |
@@ -168,9 +156,9 @@ To ensure the testing suite runs correctly without legacy Babel configurations, 
 
 ### Frontend Stack
 
-| Technology | Reason for Selection |
+| Tech | Reason for Selection |
 | :--- | :--- |
-| Next.js 16 (App Router) | Provides a powerful framework for React, offering features like automatic code splitting, server components, and optimized routing crucial for building a production-ready application. |
+| Next.js (App Router) | Provides a powerful framework for React, offering features like automatic code splitting, server components, and optimized routing crucial for building a production-ready application. |
 | Tailwind CSS | Used for utility-first styling, enabling rapid component development and easy maintenance of responsive design without leaving the component file. |
 | Jest / React Testing Library | Provides a robust testing environment focused on testing user behavior (what the user sees and interacts with), rather than implementation details. |
 | SWC (Speedy Web Compiler) | Replaces Babel as the default transpiler for Next.js, offering significantly faster compilation and testing times. |
