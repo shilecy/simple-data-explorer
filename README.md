@@ -138,7 +138,7 @@ To ensure the testing suite runs correctly without legacy Babel configurations, 
     ```bash
     npm test
     ```
-    * Description: Executes the Jest test suite.
+    * Description: Executes the Jest test (file involved: error.test.tsx)
 
 ---
 
